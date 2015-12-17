@@ -1,0 +1,82 @@
+@CHARSET "UTF-8";
+
+body {
+	background: #AFCDE7;
+}
+
+select {
+	background: #D8E6F3;
+	text-align: center;
+}
+
+.myFont1 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 14px;
+}
+
+.table2 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 14px;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+.table2 th:first-child, .table2 td:first-child {
+	background: #60a3d8;
+	color: white;
+	padding: 10px 20px;
+}
+
+.table2 th, .table2 td {
+	border-style: solid;
+	border-width: 0 1px 1px 0;
+	border-color: white;
+}
+
+.table2 td {
+	background: #D8E6F3;
+}
+
+.table2 th:first-child, .table2 td:first-child {
+	text-align: left;
+}
+
+.myButton {
+	display: inline-block;
+	width: 15em;
+	font-size: 80%;
+	color: rgba(255, 255, 255, .9);
+	text-shadow: #2e7ebd 0 1px 2px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 1.1;
+	white-space: pre-line;
+	padding: .7em 0;
+	border: 1px solid;
+	border-color: #60a3d8 #2970a9 #2970a9 #60a3d8;
+	border-radius: 6px;
+	outline: none;
+	background: #60a3d8 linear-gradient(#89bbe2, #60a3d8 50%, #378bce);
+	box-shadow: inset rgba(255, 255, 255, .5) 1px 1px;
+}
+
+
+.myButton:first-line {
+	font-size: 170%;
+	font-weight: 700;
+}
+
+
+.myButton:hover {
+	color: rgb(255, 255, 255);
+	background-image: linear-gradient(#9dc7e7, #74afdd 50%, #378bce);
+}
+
+.myButton:active {
+	color: rgb(255, 255, 255);
+	border-color: #2970a9;
+	background-image: linear-gradient(#5796c8, #6aa2ce);
+	box-shadow: none;
+}
+
+

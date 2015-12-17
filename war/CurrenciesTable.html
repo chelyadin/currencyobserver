@@ -1,0 +1,30 @@
+
+<!-- Table with parsed currencies -->
+	<table border="1" style="width: 600px; margin: auto" class="table2">
+		<tr>
+			<td>
+				<h4>BankName</h4>
+			</td>
+			<td>
+				<h4>BuyValue</h4>
+			</td>
+			<td>
+				<h4>SaleValue</h4>
+			</td>
+		</tr>
+
+		<%
+			List currencyList = (List) request.getAttribute("currencyList");
+			for (Object currObj : currencyList) {
+				String buyValue = ((Currency) currObj).getBuyValue() == 0.0 ? "error"
+						: Float.toString(((Currency) currObj).getBuyValue());
+				String saleValue = ((Currency) currObj).getSaleValue() == 0.0 ? "error"
+						: Float.toString(((Currency) currObj).getSaleValue());
+
+				out.print("<tr><td style='width:200px'>"
+						+ ((Currency) currObj).getBankName() + "</td>"
+						+ "<td style='width:200px'>" + buyValue + "</td>"
+						+ "<td style='width:200px'>" + saleValue + "</td></tr>");
+			}
+		%>
+	</table>
