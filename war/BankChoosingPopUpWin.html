@@ -1,0 +1,73 @@
+
+	<!-- Pop-up window for banks choosing -->
+
+	<a href="#win1" id="win_pop" class="myButton" >Select banks</a>
+
+
+	<!-- Pop-up table for banks choosing -->
+
+	<a href="#x" class="overlay" id="win1"></a>
+	<div class="popup">
+		<center>
+			<form action="curr" method="get">
+				<p>Select banks:</p>
+
+				<!-- Table for banks choosing-->
+				<table>
+					<tr>
+						<td width="200px">USD banks:</td>
+						<td width="200px">EUR banks:</td>
+						<td width="200px">RUB banks:</td>
+					</tr>
+					<tr>
+						<td>
+							<%-- Filling USD banks parsers for choosing --%> <%
+						ArrayList<BankParserInfc> parserUsdArrayList = (ArrayList<BankParserInfc>) request
+						.getAttribute("parserUsdArrayList");
+									for (BankParserInfc parser : parserUsdArrayList){
+										String isUsed = parser.isUsed() ? "checked" :""; out.println(
+												"<input type='checkbox' name='choosenBankUsd"
+												+ parser.getCurrency().getBankName() + "'" + isUsed	+ " >"
+												+ parser.getCurrency().getBankName() + "<br>"); } 
+							%>
+						</td>
+
+						<td>
+							<%-- Filling EUR banks parsers for choosing --%> <%
+						ArrayList<BankParserInfc> parserEurArrayList =	(ArrayList<BankParserInfc>) request
+						.getAttribute("parserEurArrayList");
+									for (BankParserInfc parser : parserEurArrayList) {
+										String isUsed = parser.isUsed() ? "checked": "";
+										out.println(
+												"<input type='checkbox'	name='choosenBankEur"
+ 												+ parser.getCurrency().getBankName() + "'" + isUsed	+ " >"
+												+ parser.getCurrency().getBankName() + "<br>"); }
+									%>
+						</td>
+
+						<td>
+							<%-- Filling RUB banks parsers for choosing --%> <%
+						ArrayList<BankParserInfc> parserRubArrayList = (ArrayList<BankParserInfc>) request
+						.getAttribute("parserRubArrayList");
+									for (BankParserInfc parser : parserRubArrayList) {
+										String isUsed = parser.isUsed() ? "checked" : "";
+										out.println(
+												"<input type='checkbox'	name='choosenBankRub"
+ 												+ parser.getCurrency().getBankName() + "'" + isUsed	+ " >"
+												+ parser.getCurrency().getBankName() + "<br>"); }
+						%>
+						</td>
+					</tr>
+
+				</table>
+
+				<p>
+					<input type="submit" value="Set banks" name="choiceBankButton"
+						width: 200px;"
+						class="myButton">
+
+				</p>
+			</form>
+		</center>
+		<a class="close" title="Close" href="#close"></a>
+	</div>

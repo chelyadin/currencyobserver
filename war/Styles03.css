@@ -1,0 +1,111 @@
+@CHARSET "UTF-8";
+
+.buttonRound{
+    font:15px Calibri, Arial, sans-serif;
+
+    /* A semi-transparent text shadow */
+    text-shadow:1px 1px 0 rgba(255,255,255,0.4);
+
+    /* Overriding the default underline styling of the links */
+    text-decoration:none !important;
+    white-space:nowrap;
+
+    display:inline-block;
+    vertical-align:baseline;
+    position:relative;
+    cursor:pointer;
+    padding:10px 20px;
+
+    background-repeat:no-repeat;
+
+    /* The following two rules are fallbacks, in case
+       the browser does not support multiple backgrounds. */
+
+    background-position:bottom left;
+    background-image:url('button_bg.png');
+
+    /* CSS3 background positioning property with multiple values. The background
+       images themselves are defined in the individual color classes */
+
+    background-position:bottom left, top right, 0 0, 0 0;
+    background-clip:border-box;
+
+    /* Applying a default border radius of 8px */
+
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+
+    /* A 1px highlight inside of the button */
+
+    -moz-box-shadow:0 0 1px #fff inset;
+    -webkit-box-shadow:0 0 1px #fff inset;
+    box-shadow:0 0 1px #fff inset;
+
+    /* Animating the background positions with CSS3 */
+    /* Currently works only in Safari/Chrome */
+
+    -webkit-transition:background-position 1s;
+    -moz-transition:background-position 1s;
+    -o-transition:background-position 1s;
+    transition:background-position 1s;
+}
+
+.buttonRound:hover{
+
+    /* The first rule is a fallback, in case the browser
+       does not support multiple backgrounds
+    */
+
+    background-position:top left;
+    background-position:top left, bottom right, 0 0, 0 0;
+}
+
+
+.blue_button {
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+    line-height: 60px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    -webkit-box-shadow: inset 0px 1px 3px #cfeff3;
+    -moz-box-shadow: inset 0px 1px 3px #cfeff3;
+    box-shadow: inset 0px 1px 3px #cfeff3;
+    background: -webkit-linear-gradient(top, #A2DBDC 0%, #59A5A8 50%, #418F93 51%, #2F777C 100%);
+    background: -moz-linear-gradient(top, #A2DBDC 0%, #59A5A8 50%, #418F93 51%, #2F777C 100%);
+    background: -ms-linear-gradient(top, #A2DBDC 0%, #59A5A8 50%, #418F93 51%, #2F777C 100%);
+    background: -o-linear-gradient(top, #A2DBDC 0%, #59A5A8 50%, #418F93 51%, #2F777C 100%);
+    background: linear-gradient(top, #A2DBDC 0%, #59A5A8 50%, #418F93 51%, #2F777C 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=’#A2DBDC’, endColorstr=’#2F777C’,GradientType=0 );
+    border: 1px solid #70c9d5;
+    cursor: pointer;
+    color: #e1fdff;
+    font-size: 24px;
+    letter-spacing: 0px;
+    text-shadow: #CDF2F7 0px 1px 0, #256569 0 -1px 0;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.blue_button:hover {
+    filter: alpha(opacity=94);
+    opacity: 0.94;
+    colour: #afe6e7;
+}
+
+.blue_button:active {
+    background: -webkit-linear-gradient(top, #95d3d4 0%, #4c9da0 51%, #318185 52%, #226b70 100%);
+    background: -moz-linear-gradient(top, #95d3d4 0%, #4c9da0 51%, #318185 52%, #226b70 100%);
+    background: -ms-linear-gradient(top, #95d3d4 0%, #4c9da0 51%, #318185 52%, #226b70 100%);
+    background: -o-linear-gradient(top, #95d3d4 0%, #4c9da0 51%, #318185 52%, #226b70 100%);
+    background: linear-gradient(top, #95d3d4 0%, #4c9da0 51%, #318185 52%, #226b70 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=’#95d3d4?, endColorstr=’#226b70?,GradientType=0 );
+    -moz-box-shadow: inset 0px 0px 15px #256569;
+    -webkit-box-shadow: inset 0px 0px 15px #256569;
+    box-shadow: inset 0px 0px 15px #256569;
+    border: 1px solid #256569;
+    line-height: 62px !important;
+}
